@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Libros de MoZ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #6a00ff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .book-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+    }
+    .book {
+      background: white;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .book img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+    .book a {
+      text-decoration: none;
+      color: #6a00ff;
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📚 Libros de MoZ</h1>
+    <p>Explora mis obras disponibles en Amazon</p>
+  </header>
+
+  <main>
+    <div class="book-gallery">
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/61T7KXx9VtL._SY522_.jpg" alt="Conversaciones con MoZ">
+        <a href="https://www.amazon.com.mx/dp/B0CFQYDS83" target="_blank">Conversaciones con MoZ</a>
+      </div>
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/71QHZwGnUbL._SY522_.jpg" alt="Las Parábolas de Jesús">
+        <a href="https://www.amazon.com.mx/dp/B0CGLS3SK6" target="_blank">Las Parábolas de Jesús</a>
+      </div>
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/61zIjG8aZnL._SY522_.jpg" alt="Finanzas en Paz">
+        <a href="https://www.amazon.com.mx/dp/B0CN1SGXWB" target="_blank">Finanzas en Paz</a>
+      </div>
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/61cU7L2EbBL._SY522_.jpg" alt="Devocionario UCDM">
+        <a href="https://www.amazon.com.mx/dp/B0CYNJKWRR" target="_blank">Devocionario UCDM</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 MoZ - Todos los derechos reservados · <a href="https://www.amazon.com.mx/stores/author/B0F5BQ4CV8/allbooks" target="_blank">Ver todos los libros en Amazon</a></p>
+  </footer>
+</body>
+</html>
