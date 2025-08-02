@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Libros de MoZ</title>
   <style>
     body {
@@ -23,15 +23,31 @@
       margin: 30px auto;
       padding: 0 20px;
     }
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .profile img {
+      width: 150px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .profile p {
+      margin-top: 15px;
+      text-align: center;
+      max-width: 700px;
+    }
     .book-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 20px;
     }
     .book {
       background: white;
       border-radius: 10px;
-      padding: 10px;
+      padding: 15px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
     }
@@ -47,6 +63,11 @@
       display: block;
       margin-top: 10px;
     }
+    .book p {
+      font-size: 14px;
+      margin-top: 10px;
+      color: #555;
+    }
     footer {
       text-align: center;
       padding: 20px;
@@ -58,32 +79,41 @@
 <body>
   <header>
     <h1>📚 Libros de MoZ</h1>
-    <p>Explora mis obras disponibles en Amazon</p>
+    <p>Explora mis obras disponibles en Amazon México</p>
   </header>
 
   <main>
+    <div class="profile">
+      <img src="https://avatars.githubusercontent.com/u/160282848?v=4" alt="Foto de MoZ" />
+      <p>Soy MoZ, orador, autor y guía espiritual. Llevo más de 15 años compartiendo las enseñanzas de *Un Curso de Milagros* con humor, claridad y profundidad. Estos libros nacieron para acompañarte en tu camino a la paz interior... y para que no te quedes dormido en el intento. 😌📘</p>
+    </div>
+
     <div class="book-gallery">
       <div class="book">
         <img src="https://m.media-amazon.com/images/I/61T7KXx9VtL._SY522_.jpg" alt="Conversaciones con MoZ">
         <a href="https://www.amazon.com.mx/dp/B0CFQYDS83" target="_blank">Conversaciones con MoZ</a>
+        <p>90 preguntas y respuestas sobre *Un Curso de Milagros* explicadas sin rollos, con claridad y buena onda. Ideal para estudiantes nuevos o confundidos crónicos.</p>
       </div>
       <div class="book">
-        <img src="https://m.media-amazon.com/images/I/71QHZwGnUbL._SY522_.jpg" alt="Las Parábolas de Jesús">
+        <img src="https://m.media-amazon.com/images/I/71QHZwGnUbL._SY522_.jpg" alt="Las Parábolas de Jesús a la luz de UCDM">
         <a href="https://www.amazon.com.mx/dp/B0CGLS3SK6" target="_blank">Las Parábolas de Jesús</a>
+        <p>Jesús era un crack contando historias. En este libro analizo sus parábolas a la luz del Curso de Milagros, sin encajes ni incienso, pero con mucha claridad.</p>
       </div>
       <div class="book">
         <img src="https://m.media-amazon.com/images/I/61zIjG8aZnL._SY522_.jpg" alt="Finanzas en Paz">
         <a href="https://www.amazon.com.mx/dp/B0CN1SGXWB" target="_blank">Finanzas en Paz</a>
+        <p>Una guía espiritual y práctica para dejar de pelear con el dinero. Spoiler: el problema no era el banco, eras tú... y tus pensamientos.</p>
       </div>
       <div class="book">
-        <img src="https://m.media-amazon.com/images/I/61cU7L2EbBL._SY522_.jpg" alt="Devocionario UCDM">
+        <img src="https://m.media-amazon.com/images/I/61cU7L2EbBL._SY522_.jpg" alt="Devocionario de UCDM">
         <a href="https://www.amazon.com.mx/dp/B0CYNJKWRR" target="_blank">Devocionario UCDM</a>
+        <p>Frases, oraciones y recordatorios diarios para quienes quieren tener el Curso en el corazón, incluso cuando se les olvidó en la mochila.</p>
       </div>
     </div>
   </main>
 
   <footer>
-    <p>© 2025 MoZ - Todos los derechos reservados · <a href="https://www.amazon.com.mx/stores/author/B0F5BQ4CV8/allbooks" target="_blank">Ver todos los libros en Amazon</a></p>
+    <p>© 2025 MoZ · <a href="https://www.amazon.com.mx/stores/author/B0F5BQ4CV8/allbooks" target="_blank">Ver todos los libros en Amazon</a></p>
   </footer>
 </body>
 </html>
