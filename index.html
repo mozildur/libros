@@ -1,119 +1,175 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Libros de MoZ</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📚 Libros de MoZ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      color: #333;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+      color: #333;
+      line-height: 1.6;
     }
     header {
       background: #6a00ff;
       color: white;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    main {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
     }
     .profile {
+      max-width: 1100px;
+      margin: 40px auto;
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 40px;
+      text-align: center;
+      padding: 0 20px;
     }
     .profile img {
-      width: 150px;
+      width: 160px;
       border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
     }
     .profile p {
-      margin-top: 15px;
-      text-align: center;
+      margin-top: 20px;
+      font-size: 1.1rem;
       max-width: 700px;
     }
+    .cta {
+      background: #ff9100;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      text-decoration: none;
+    }
+    .cta:hover {
+      background: #e57c00;
+    }
     .book-gallery {
+      max-width: 1100px;
+      margin: 40px auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
     }
     .book {
       background: white;
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .book:hover {
+      transform: translateY(-8px);
     }
     .book img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
-      border-radius: 6px;
     }
-    .book a {
-      text-decoration: none;
+    .book-info {
+      padding: 20px;
+    }
+    .book-info h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
       color: #6a00ff;
-      font-weight: bold;
-      display: block;
-      margin-top: 10px;
     }
-    .book p {
-      font-size: 14px;
-      margin-top: 10px;
+    .book-info p {
+      font-size: 0.95rem;
       color: #555;
+    }
+    .book-info a {
+      display: inline-block;
+      margin-top: 15px;
+      background: #6a00ff;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .book-info a:hover {
+      background: #4d00bb;
     }
     footer {
       text-align: center;
       padding: 20px;
-      font-size: 14px;
-      color: #666;
+      font-size: 0.9rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>📚 Libros de MoZ</h1>
-    <p>Explora mis obras disponibles en Amazon México</p>
+    <p>Despierta tu mente. Transforma tu vida. Un milagro a la vez.</p>
   </header>
 
-  <main>
-    <div class="profile">
-      <img src="https://avatars.githubusercontent.com/u/160282848?v=4" alt="Foto de MoZ" />
-      <p>Soy MoZ, orador, autor y guía espiritual. Llevo más de 15 años compartiendo las enseñanzas de *Un Curso de Milagros* con humor, claridad y profundidad. Estos libros nacieron para acompañarte en tu camino a la paz interior... y para que no te quedes dormido en el intento. 😌📘</p>
-    </div>
+  <div class="profile">
+    <img src="https://m.media-amazon.com/images/S/amzn-author-media-prod/tjk4kbdc83sckchj45rje95j1v._SY450_CR0%2C0%2C450%2C450_.jpg" alt="Foto de MoZ">
+    <p>Soy MoZ, escritor y conferencista. Llevo más de 15 años compartiendo las enseñanzas de <em>Un Curso de Milagros</em>. Mis libros son una invitación a despertar con humor, claridad y profundidad. 🌟</p>
+    <a href="https://www.amazon.com.mx/stores/author/B0F5BQ4CV8/allbooks" target="_blank" class="cta">Ver todos en Amazon</a>
+  </div>
 
-    <div class="book-gallery">
-      <div class="book">
-        <img src="https://m.media-amazon.com/images/I/61T7KXx9VtL._SY522_.jpg" alt="Conversaciones con MoZ">
-        <a href="https://a.co/d/i7JFLJr" target="_blank">Conversaciones con MoZ</a>
-        <p>90 preguntas y respuestas sobre *Un Curso de Milagros* explicadas sin rollos, con claridad y buena onda. Ideal para estudiantes nuevos o confundidos crónicos.</p>
-      </div>
-      <div class="book">
-        <img src="https://m.media-amazon.com/images/I/71QHZwGnUbL._SY522_.jpg" alt="Las Parábolas de Jesús a la luz de UCDM">
-        <a href="https://a.co/d/b5WxK1f" target="_blank">Las Parábolas de Jesús</a>
-        <p>Jesús era un crack contando historias. En este libro analizo sus parábolas a la luz del Curso de Milagros, sin encajes ni incienso, pero con mucha claridad.</p>
-      </div>
-      <div class="book">
-        <img src="https://m.media-amazon.com/images/I/61zIjG8aZnL._SY522_.jpg" alt="Finanzas en Paz">
-        <a href="https://a.co/d/bL7TeUB" target="_blank">Finanzas en Paz</a>
-        <p>Una guía espiritual y práctica para dejar de pelear con el dinero. Spoiler: el problema no era el banco, eras tú... y tus pensamientos.</p>
-      </div>
-      <div class="book">
-        <img src="https://m.media-amazon.com/images/I/61cU7L2EbBL._SY522_.jpg" alt="Devocionario de UCDM">
-        <a href="https://a.co/d/46fFmYT" target="_blank">Devocionario UCDM</a>
-        <p>Frases, oraciones y recordatorios diarios para quienes quieren tener el Curso en el corazón, incluso cuando se les olvidó en la mochila.</p>
+  <div class="book-gallery">
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/61T7KXx9VtL._SY522_.jpg" alt="Conversaciones con MoZ">
+      <div class="book-info">
+        <h3>Conversaciones con MoZ</h3>
+        <p>90 preguntas y respuestas sobre <em>Un Curso de Milagros</em> con explicaciones claras, amenas y sin rollos.</p>
+        <a href="https://a.co/d/i7JFLJr" target="_blank">Comprar</a>
       </div>
     </div>
-  </main>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/71QHZwGnUbL._SY522_.jpg" alt="Las Parábolas de Jesús">
+      <div class="book-info">
+        <h3>Las Parábolas de Jesús</h3>
+        <p>Jesús como maestro de cuentos. Una lectura fresca de sus parábolas bajo la visión del Curso de Milagros.</p>
+        <a href="https://a.co/d/b5WxK1f" target="_blank">Comprar</a>
+      </div>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/61zIjG8aZnL._SY522_.jpg" alt="Finanzas en Paz">
+      <div class="book-info">
+        <h3>Finanzas en Paz</h3>
+        <p>Una guía espiritual y práctica para dejar de sufrir por el dinero y comenzar a vivir con abundancia interior.</p>
+        <a href="https://a.co/d/bL7TeUB" target="_blank">Comprar</a>
+      </div>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/61cU7L2EbBL._SY522_.jpg" alt="Devocionario UCDM">
+      <div class="book-info">
+        <h3>Devocionario de UCDM</h3>
+        <p>Oraciones, frases y prácticas devocionales para mantener la mente enfocada en la paz, día a día.</p>
+        <a href="https://a.co/d/46fFmYT" target="_blank">Comprar</a>
+      </div>
+    </div>
+  </div>
 
   <footer>
-    <p>© 2025 MoZ · <a href="https://www.amazon.com.mx/stores/author/B0F5BQ4CV8/allbooks" target="_blank">Ver todos los libros en Amazon</a></p>
+    <p>© 2025 MoZ · Hecho con amor y milagros · <a href="https://mozildur.github.io/libros/">Volver al inicio</a></p>
   </footer>
 </body>
 </html>
