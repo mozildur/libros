@@ -28,8 +28,10 @@
       font-size: 2.8rem;
       margin-bottom: 10px;
     }
-    header p {
+    #random-phrase {
       font-size: 1.2rem;
+      color: #ffdd57;
+      margin-top: 10px;
     }
     .profile, .testimonials, .contact {
       max-width: 1100px;
@@ -65,10 +67,10 @@
       background: #e57c00;
     }
     .book-gallery {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 40px auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 30px;
       padding: 0 20px;
     }
@@ -78,6 +80,8 @@
       overflow: hidden;
       box-shadow: 0 6px 20px rgba(0,0,0,0.1);
       transition: transform 0.3s;
+      text-align: center;
+      padding: 20px;
     }
     .book:hover {
       transform: translateY(-8px);
@@ -85,29 +89,31 @@
     .book img {
       width: 100%;
       height: auto;
-    }
-    .book-info {
-      padding: 20px;
+      max-width: 120px;
+      margin: 0 auto 10px;
+      display: block;
     }
     .book-info h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
+      font-size: 1.1rem;
+      margin: 10px 0;
       color: #6a00ff;
     }
     .book-info p {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: #555;
+      min-height: 80px;
     }
     .book-info a {
       display: inline-block;
-      margin-top: 15px;
+      margin-top: 10px;
       background: #6a00ff;
       color: white;
-      padding: 8px 20px;
+      padding: 6px 16px;
       border-radius: 25px;
       font-weight: bold;
       text-decoration: none;
       transition: background 0.3s;
+      font-size: 0.9rem;
     }
     .book-info a:hover {
       background: #4d00bb;
@@ -146,7 +152,7 @@
 <body>
   <header>
     <h1>📓 Libros de MoZ</h1>
-    <p>Despierta tu mente. Transforma tu vida. Un milagro a la vez.</p>
+    <div id="random-phrase"></div>
   </header>
 
   <div class="profile">
@@ -155,75 +161,94 @@
     <a href="https://www.amazon.com.mx/stores/author/B0F5BQ4CV8/allbooks" target="_blank" class="cta">Ver todos en Amazon</a>
   </div>
 
-  $1
-    <div class="book">
-      <img src="https://m.media-amazon.com/images/I/81jSGdbQRPL._SL1500_.jpg" alt="La Luz Que Llevas Dentro">
-      <div class="book-info">
-        <h3>La Luz Que Llevas Dentro</h3>
-        <p>Una guía amorosa para reconectar con tu esencia, despertar tu luz interior y vivir en coherencia con tu ser.</p>
-        <a href="https://a.co/d/jcTICwa" target="_blank">Comprar</a>
-      </div>
-    </div>
-    <div class="book">
-      <img src="https://m.media-amazon.com/images/I/818v1ZZXBYL._SL1500_.jpg" alt="Milagros para Famosos">
-      <div class="book-info">
-        <h3>Milagros para Famosos</h3>
-        <p>Un análisis divertido y profundo de escándalos mediáticos desde la perspectiva de Un Curso de Milagros.</p>
-        <a href="https://a.co/d/7RT3PUt" target="_blank">Comprar</a>
-      </div>
-    </div>
-  </div>
-    <div class="book">
-      <img src="https://m.media-amazon.com/images/I/71efrxZuoTL._SL1500_.jpg" alt="Las Parábolas de Jesús">
-      <div class="book-info">
-        <h3>Las Parábolas de Jesús</h3>
-        <p>Jesús como maestro de cuentos. Una lectura fresca de sus parábolas bajo la visión del Curso de Milagros.</p>
-        <a href="https://a.co/d/b5WxK1f" target="_blank">Comprar</a>
-      </div>
-    </div>
-    <div class="book">
-      <img src="https://m.media-amazon.com/images/I/71St4zevGZL._SL1500_.jpg" alt="Finanzas en Paz">
-      <div class="book-info">
-        <h3>Finanzas en Paz</h3>
-        <p>Una guía espiritual y práctica para dejar de sufrir por el dinero y comenzar a vivir con abundancia interior.</p>
-        <a href="https://a.co/d/bL7TeUB" target="_blank">Comprar</a>
-      </div>
-    </div>
-    <div class="book">
-      <img src="https://m.media-amazon.com/images/I/81DOcJp16gL._SL1500_.jpg" alt="Devocionario UCDM">
-      <div class="book-info">
-        <h3>Devocionario de UCDM</h3>
-        <p>Oraciones, frases y prácticas devocionales para mantener la mente enfocada en la paz, día a día.</p>
-        <a href="https://a.co/d/46fFmYT" target="_blank">Comprar</a>
-      </div>
-    </div>
-  </div>
+  <div class="book-gallery" id="book-gallery"></div>
 
   <div class="testimonials">
-    <h2>Testimonios de lectores</h2>
-    <div class="testimonial">
-      "Los libros de MoZ me ayudaron a entender el Curso de Milagros como ningún otro maestro. Claridad, humor y profundidad. ¡Gracias infinitas!"
-      <span>- Andrea R.</span>
-    </div>
-    <div class="testimonial">
-      "Finanzas en Paz me salvó de una crisis emocional y económica. No es solo un libro, es una experiencia transformadora."
-      <span>- Luis M.</span>
-    </div>
-    <div class="testimonial">
-      "¡Me reí, lloré y perdoné con las parábolas! MoZ hace que el mensaje de Jesús sea moderno y útil."
-      <span>- Carmen V.</span>
-    </div>
+    <h2>Testimonios</h2>
+    <div class="testimonial" id="testimonial"></div>
   </div>
 
   <div class="contact">
-    <h2>Conecta conmigo</h2>
+    <p>Contacto: <a href="mailto:moz@primerotupaz.com">moz@primerotupaz.com</a></p>
+    <a href="https://www.instagram.com/primeratencion" target="_blank">Instagram</a>
     <a href="https://www.youtube.com/channel/UCWMdQmpS04i2j0ehwMmuMEw" target="_blank">YouTube</a>
-    <a href="https://www.instagram.com/primeratencion/" target="_blank">Instagram</a>
-    <a href="mailto:moz@primerotupaz.com">Correo: moz@primerotupaz.com</a>
   </div>
 
   <footer>
-    <p>© 2025 MoZ · Hecho con amor y milagros · <a href="https://mozildur.github.io/libros/">Volver al inicio</a></p>
+    © 2025 MoZ. Todos los derechos reservados.
   </footer>
+
+  <script>
+    const frases = [
+      "Despierta tu mente, transforma tu vida. 🧠✨",
+      "Un milagro a la vez, sin prisa pero con paz. 🌈",
+      "Explorar el Curso puede ser divertido. 😄",
+      "No busques la luz afuera, ya brillas dentro. 💡"
+    ];
+    document.getElementById("random-phrase").textContent = frases[Math.floor(Math.random() * frases.length)];
+
+    const testimonios = [
+      "Estos libros me cambiaron la vida. Gracias MoZ por tu claridad.",
+      "Nunca pensé que Un Curso de Milagros pudiera ser tan divertido.",
+      "Leer a MoZ es como hablar con un amigo sabio y buena onda.",
+      "La forma en que explica es única. ¡Recomendadísimo!",
+      "Pensé que sería denso... pero terminé riéndome y aprendiendo mucho."
+    ];
+    document.getElementById("testimonial").innerHTML = `"${testimonios[Math.floor(Math.random() * testimonios.length)]}"`;
+
+    const libros = [
+      {
+        titulo: "Explorando Un Curso de Milagros",
+        imagen: "https://m.media-amazon.com/images/I/81jSGdbQRPL._SL1500_.jpg",
+        descripcion: "Una guía clara, cercana y llena de humor para estudiantes del Curso.",
+        enlace: "https://a.co/d/jcTICwa"
+      },
+      {
+        titulo: "No soy especial",
+        imagen: "https://m.media-amazon.com/images/I/818v1ZZXBYL._SL1500_.jpg",
+        descripcion: "Reflexiones directas para desinflar el ego con amor y firmeza.",
+        enlace: "https://a.co/d/7RT3PUt"
+      },
+      {
+        titulo: "Conversaciones con MoZ",
+        imagen: "https://m.media-amazon.com/images/I/816BucajEkL._SL1500_.jpg",
+        descripcion: "90 preguntas reales sobre el Curso, respondidas con profundidad y calidez.",
+        enlace: "https://a.co/d/i7JFLJr"
+      },
+      {
+        titulo: "Finanzas en Paz",
+        imagen: "https://m.media-amazon.com/images/I/71St4zevGZL._SL1500_.jpg",
+        descripcion: "Una nueva forma de ver el dinero con conciencia, abundancia y paz.",
+        enlace: "https://a.co/d/bL7TeUB"
+      },
+      {
+        titulo: "Las Parábolas de Jesús",
+        imagen: "https://m.media-amazon.com/images/I/71efrxZuoTL._SL1500_.jpg",
+        descripcion: "Una mirada luminosa y moderna a las parábolas desde el Curso.",
+        enlace: "https://a.co/d/b5WxK1f"
+      },
+      {
+        titulo: "Devocionario de Un Curso de Milagros",
+        imagen: "https://m.media-amazon.com/images/I/81DOcJp16gL._SL1500_.jpg",
+        descripcion: "Oraciones, afirmaciones y reflexiones para acompañar tu práctica diaria.",
+        enlace: "https://a.co/d/46fFmYT"
+      }
+    ];
+
+    const galeria = document.getElementById("book-gallery");
+    libros.forEach(libro => {
+      const div = document.createElement("div");
+      div.className = "book";
+      div.innerHTML = `
+        <img src="${libro.imagen}" alt="${libro.titulo}">
+        <div class="book-info">
+          <h3>${libro.titulo}</h3>
+          <p>${libro.descripcion}</p>
+          <a href="${libro.enlace}" target="_blank">Comprar</a>
+        </div>
+      `;
+      galeria.appendChild(div);
+    });
+  </script>
 </body>
 </html>
