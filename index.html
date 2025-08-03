@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>📓 Libros de MoZ</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-      color: #333; line-height: 1.6;
+      background: #f2f2f2;
+      color: #333;
+      line-height: 1.6;
     }
     header {
-      background: #6a00ff;
+      background: #232f3e;
       color: white;
-      padding: 40px 20px;
+      padding: 30px 20px;
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    header h1 { font-size: 2.8rem; margin-bottom: 10px; }
+    header h1 {
+      font-size: 2.4rem;
+    }
     #random-phrase {
-      font-size: 1.2rem;
-      color: #ffdd57;
+      font-size: 1rem;
+      color: #ffcc00;
       margin-top: 10px;
     }
     .profile, .testimonials, .contact {
@@ -32,87 +38,66 @@
       text-align: center;
     }
     .profile img {
-      width: 160px;
+      width: 140px;
       border-radius: 50%;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
     }
     .profile p {
       margin-top: 20px;
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
+      font-size: 1rem;
     }
     .cta {
-      background: #ff9100;
+      background: #ff9900;
       color: white;
-      padding: 12px 30px;
-      border: none;
-      border-radius: 30px;
-      font-size: 1rem;
-      margin-top: 20px;
-      cursor: pointer;
-      transition: 0.3s ease;
+      padding: 10px 20px;
+      border-radius: 5px;
       text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
     }
-    .cta:hover { background: #e57c00; }
-
     .book-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
       max-width: 1200px;
       margin: 40px auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
       padding: 0 20px;
     }
     .book {
       background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       text-align: center;
-      padding: 20px;
     }
-    .book:hover { transform: translateY(-8px); }
     .book img {
-      width: 100%;
+      width: 100px;
       height: auto;
-      max-width: 100px;
-      margin: 0 auto 10px;
-      display: block;
     }
     .book-info h3 {
-      font-size: 1.1rem;
-      margin: 10px 0;
-      color: #6a00ff;
+      color: #007185;
+      margin: 10px 0 5px;
+      font-size: 1rem;
     }
     .book-info p {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: #555;
-      min-height: 80px;
     }
     .book-info a {
       display: inline-block;
       margin-top: 10px;
-      background: #6a00ff;
+      background: #007185;
       color: white;
-      padding: 6px 16px;
-      border-radius: 25px;
-      font-weight: bold;
+      padding: 6px 12px;
       text-decoration: none;
-      transition: background 0.3s;
-      font-size: 0.9rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
     }
-    .book-info a:hover { background: #4d00bb; }
-
     .testimonial {
-      background: #fff;
-      padding: 20px;
-      margin: 20px auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      max-width: 800px;
+      background: white;
+      padding: 15px;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
       font-style: italic;
     }
     .testimonial span {
@@ -120,19 +105,17 @@
       margin-top: 10px;
       font-weight: bold;
       font-style: normal;
-      color: #6a00ff;
+      color: #232f3e;
     }
     .contact a {
-      display: inline-block;
-      margin: 10px;
-      color: #6a00ff;
+      color: #007185;
       text-decoration: none;
-      font-weight: bold;
+      margin: 0 10px;
     }
     footer {
       text-align: center;
       padding: 20px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: #777;
     }
   </style>
@@ -176,25 +159,26 @@
     document.getElementById("random-phrase").textContent = frases[Math.floor(Math.random() * frases.length)];
 
     const testimonios = [
-      "Estos libros me cambiaron la vida. Gracias MoZ por tu claridad.",
-      "Nunca pensé que Un Curso de Milagros pudiera ser tan divertido.",
-      "Leer a MoZ es como hablar con un amigo sabio y buena onda.",
-      "La forma en que explica es única. ¡Recomendadísimo!",
-      "Pensé que sería denso... pero terminé riéndome y aprendiendo mucho."
+      { texto: "Estos libros me cambiaron la vida. Gracias MoZ por tu claridad.", nombre: "Carla Gómez – CDMX" },
+      { texto: "Nunca pensé que Un Curso de Milagros pudiera ser tan divertido.", nombre: "Luis Mendoza – Bogotá" },
+      { texto: "Leer a MoZ es como hablar con un amigo sabio y buena onda.", nombre: "Andrea Silva – Lima" },
+      { texto: "La forma en que explica es única. ¡Recomendadísimo!", nombre: "José Pérez – Monterrey" },
+      { texto: "Pensé que sería denso... pero terminé riéndome y aprendiendo mucho.", nombre: "Mariela Torres – Buenos Aires" }
     ];
-    document.getElementById("testimonial").innerHTML = `"${testimonios[Math.floor(Math.random() * testimonios.length)]}"`;
+    const t = testimonios[Math.floor(Math.random() * testimonios.length)];
+    document.getElementById("testimonial").innerHTML = `"${t.texto}"<span>– ${t.nombre}</span>`;
 
     const libros = [
       {
         titulo: "Explorando Un Curso de Milagros",
         imagen: "https://m.media-amazon.com/images/I/81jSGdbQRPL._SL1500_.jpg",
-        descripcion: "Una guía clara, cercana y con humor para entender el Curso y vivir en paz.",
+        descripcion: "Una guía clara, cercana y llena de humor para estudiantes del Curso.",
         enlace: "https://a.co/d/jcTICwa"
       },
       {
         titulo: "No soy especial",
         imagen: "https://m.media-amazon.com/images/I/818v1ZZXBYL._SL1500_.jpg",
-        descripcion: "Un llamado a soltar el ego, con honestidad, práctica y conciencia.",
+        descripcion: "Reflexiones directas para desinflar el ego con amor y firmeza.",
         enlace: "https://a.co/d/7RT3PUt"
       },
       {
