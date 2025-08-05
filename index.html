@@ -5,87 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>📓 Libros de MoZ | Explorando Un Curso de Milagros</title>
   <meta name="description" content="Descubre los libros de MoZ: humor, profundidad y enseñanzas prácticas de Un Curso de Milagros. Compra en Amazon y despierta tu mente.">
-  <!-- Open Graph -->
-  <meta property="og:title" content="Libros de MoZ | Explorando Un Curso de Milagros">
-  <meta property="og:description" content="Guía clara y cercana para estudiantes de Un Curso de Milagros—con humor y profundidad.">
-  <meta property="og:image" content="https://m.media-amazon.com/images/I/81jSGdbQRPL._SL1500_.jpg">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="/favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <!-- Fonts & Preconnect -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #fff;
       --fg: #232f3e;
       --accent: #ff9900;
       --accent-hover: #ffb347;
-      --subtle: #f2f2f2;
+      --subtle: #f7f9fa;
+      --bg-secondary: #f1f3f5;
+      --bg-tertiary: #fff7e6;
       --cta-text: #fff;
+      --font-sans: 'Poppins', sans-serif;
+      --font-serif: 'Playfair Display', serif;
     }
     [data-theme="dark"] {
       --bg: #1a1a1a;
       --fg: #e0e0e0;
       --accent: #ff9900;
       --subtle: #2a2a2a;
+      --bg-secondary: #2f2f2f;
+      --bg-tertiary: #3a2a1f;
     }
     * { box-sizing: border-box; margin:0; padding:0; }
-    body { font-family: 'Poppins', sans-serif; background: var(--subtle); color: var(--fg); line-height:1.6; }
+    body { font-family: var(--font-sans); background: var(--subtle); color: var(--fg); line-height:1.6; }
     a { color: inherit; text-decoration:none; }
-    .container { max-width: 1100px; margin: auto; padding: 0 1rem; }
-    header { background: var(--fg); color: var(--bg); padding: 2rem 0; text-align:center; position: relative; }
-    header h1 { font-size:2.5rem; }
-    header p { margin-top:0.5rem; color: var(--accent); }
+    .skip-link { position:absolute; top:0; left:0; background:var(--accent); color:var(--cta-text); padding:0.5rem; transform:translateY(-100%); transition:transform .3s; }
+    .skip-link:focus { transform:translateY(0); }
+    header { background: linear-gradient(135deg, var(--accent), var(--fg)); padding:2rem 0; text-align:center; position: relative; }
+    header h1 { font-family: var(--font-serif); font-size:2.5rem; color:var(--bg); }
+    header p { margin-top:0.5rem; color: var(--bg-tertiary); font-size:1.1rem; }
     .theme-toggle { position:absolute; top:1rem; right:1rem; background:var(--bg); border:none; padding:0.5rem; border-radius:50%; cursor:pointer; }
-    .cta { background: var(--accent); color: var(--cta-text); padding:0.75rem 1.5rem; border-radius:4px; display:inline-block; transition:background .3s; }
-    .cta:hover { background: var(--accent-hover); }
-    .bio { background: var(--bg); padding:2rem 0; margin-top:2rem; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05); text-align:center; }
-    .bio h2 { font-size:1.5rem; margin-bottom:1rem; color:var(--fg); }
+    .section-divider { display:block; width:100%; height:100px; }
+    .container { max-width:1100px; margin:auto; padding:4rem 1rem; }
+    .bio, #gallery-section, .testimonials, .contact { background:var(--bg); border-radius:8px; margin-bottom:2rem; }
+    .bio { background:var(--bg-tertiary); text-align:center; padding:2rem; }
+    h2 { font-family: var(--font-serif); font-size:1.8rem; margin-bottom:1rem; text-align:center; background:var(--bg-secondary); padding:0.5rem 1rem; border-radius:4px; display:inline-block; }
     .bio img { width:120px; height:120px; border-radius:50%; object-fit:cover; margin-bottom:1rem; }
-    .bio p { font-size:1rem; max-width:800px; margin:0 auto; color:var(--fg); }
-    .book-gallery { display:grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); gap:1.5rem; margin:2rem 0; }
-    .book { background: var(--bg); padding:1rem; border-radius:8px; box-shadow:0 2px 4px rgba(0,0,0,0.1); display:flex; flex-direction:column; }
-    .book img { align-self:center; max-width:100px; margin-bottom:1rem; }
-    .book h3 { font-size:1rem; margin-bottom:0.5rem; color: #007185; }
-    .book p { font-size:0.85rem; flex-grow:1; color: var(--fg); }
-    .testimonials { margin:3rem 0; }
-    .testimonial { background: var(--bg); padding:1rem; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.05); font-style:italic; position: relative; }
+    .bio p { font-size:1rem; max-width:800px; margin:0 auto; }
+    .book-gallery { display:grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); gap:1.5rem; }
+    .book { padding:1rem; border:1px solid rgba(0,0,0,0.1); background:var(--bg); display:flex; flex-direction:column; transition:transform .3s, box-shadow .3s; }
+    .book:hover { transform:translateY(-5px); box-shadow:0 8px 16px rgba(0,0,0,0.1); }
+    .book img { width:100%; height:auto; object-fit:contain; margin-bottom:1rem; border-radius:4px; }
+    .book h3 { font-size:1rem; margin:0 0 0.5rem; color:#007185; font-family: var(--font-serif); }
+    .book p { font-size:0.85rem; flex-grow:1; margin-bottom:1rem; }
+    .cta { background: var(--accent); color: var(--cta-text); padding:0.75rem 1.5rem; border-radius:4px; display:inline-block; text-align:center; transition:background .3s, transform .1s; }
+    .cta:hover { background: var(--accent-hover); }
+    .cta:active { transform:scale(1.05); }
+    .testimonials { background:var(--bg-secondary); padding:2rem; }
+    .testimonial { font-style:italic; position:relative; padding:1rem; }
     .testimonial::before { content:"\201C"; font-size:3rem; position:absolute; top:-10px; left:10px; color:var(--accent); }
     .testimonial span { display:block; margin-top:1rem; font-style:normal; font-weight:600; text-align:right; }
-    footer { text-align:center; padding:2rem 0; font-size:0.85rem; color: #777; }
-    @media(max-width:600px){ header h1{font-size:2rem;} .book-gallery{gap:1rem;} }
+    .contact { text-align:center; padding:2rem; }
+    .fade-in { opacity:0; transform:translateY(20px); animation:fadeIn 0.8s forwards; }
+    @keyframes fadeIn { to { opacity:1; transform:translateY(0); } }
+    @media(max-width:600px){ header h1{font-size:2rem;} }
   </style>
 </head>
 <body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
   <header>
     <button class="theme-toggle" aria-label="Cambiar tema">🌓</button>
     <h1>📓 Libros de MoZ</h1>
     <p id="random-phrase">Despierta tu mente, transforma tu vida. 🧠✨</p>
   </header>
+  <svg class="section-divider" viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="var(--bg-secondary)" d="M0,0 C600,100 900,0 1440,100 L1440,00 L0,0 Z"></path></svg>
 
-  <section class="container bio">
-    <img src="https://m.media-amazon.com/images/S/amzn-author-media-prod/tjk4kbdc83sckchj45rje95j1v._SY450_CR0%2C0%2C450%2C450_.jpg" alt="Foto de MoZ">
-    <h2>Sobre MoZ</h2>
-    <p>Soy MoZ, escritor y conferencista con más de 15 años compartiendo las enseñanzas de <em>Un Curso de Milagros</em>. Esta página está administrada por Lupita, mi asistente virtual, para que tengas la mejor experiencia explorando mis libros. 🌟</p>
-  </section>
+  <main id="main">
+    <section class="container bio fade-in">
+      <img src="https://m.media-amazon.com/images/S/amzn-author-media-prod/tjk4kbdc83sckchj45rje95j1v._SY450_CR0%2C0%2C450%2C450_.jpg" alt="Foto de MoZ">
+      <h2>Sobre MoZ</h2>
+      <p>Soy MoZ, escritor y conferencista con más de 15 años compartiendo las enseñanzas de <em>Un Curso de Milagros</em>. Esta página está administrada por Lupita, mi asistente virtual, para que tengas la mejor experiencia explorando mis libros. 🌟</p>
+    </section>
 
-  <section class="container" id="gallery-section">
-    <a href="https://www.amazon.com.mx/stores/author/B0F5BQ4CV8/allbooks" target="_blank" class="cta">Ver todos en Amazon</a>
-    <div class="book-gallery" id="book-gallery"></div>
-  </section>
+    <section class="container fade-in" id="gallery-section">
+      <h2>Nuestros Libros</h2>
+      <div class="book-gallery" id="book-gallery"></div>
+    </section>
 
-  <section class="container testimonials">
-    <h2>Testimonios</h2>
-    <div class="testimonial" id="testimonial"></div>
-  </section>
+    <section class="container testimonials fade-in">
+      <h2>Testimonios</h2>
+      <div class="testimonial" id="testimonial"></div>
+    </section>
 
-  <section class="container contact">
-    <p>Contáctame: <a href="mailto:moz@primerotupaz.com">moz@primerotupaz.com</a></p>
-    <p>
-      <a href="https://www.instagram.com/primeratencion" target="_blank">Instagram</a> • 
-      <a href="https://www.youtube.com/channel/UCWMdQmpS04i2j0ehwMmuMEw" target="_blank">YouTube</a>
-    </p>
-  </section>
+    <section class="container contact fade-in">
+      <h2>Contacto</h2>
+      <p>✉️ <a href="mailto:moz@primerotupaz.com">moz@primerotupaz.com</a> | 📸 <a href="https://www.instagram.com/primeratencion" target="_blank">Instagram</a> | ▶️ <a href="https://www.youtube.com/channel/UCWMdQmpS04i2j0ehwMmuMEw" target="_blank">YouTube</a></p>
+    </section>
+  </main>
 
-  <footer>© 2025 MoZ. Todos los derechos reservados.</footer>
+  <footer class="fade-in">© 2025 MoZ. Todos los derechos reservados.</footer>
 
   <script>
     // Dark/Light mode toggle
@@ -95,7 +106,7 @@
       html.dataset.theme = html.dataset.theme === 'dark' ? 'light' : 'dark';
     });
 
-    // Random frase
+    // Random phrase
     const frases = [
       "Despierta tu mente, transforma tu vida. 🧠✨",
       "Un milagro a la vez, sin prisa pero con paz. 🌈",
@@ -115,7 +126,7 @@
     const t = testimonios[Math.floor(Math.random()*testimonios.length)];
     document.getElementById('testimonial').innerHTML = `${t.t}<span>– ${t.n}</span>`;
 
-    // Galería
+    // Galería libros
     const libros = [
       {t:"Explorando Un Curso de Milagros", i:"https://m.media-amazon.com/images/I/81jSGdbQRPL._SL1500_.jpg", d:"Una guía clara, cercana y llena de humor para estudiantes del Curso.", e:"https://a.co/d/jcTICwa"},
       {t:"No soy especial", i:"https://m.media-amazon.com/images/I/818v1ZZXBYL._SL1500_.jpg", d:"Reflexiones directas para desinflar el ego con amor y firmeza.", e:"https://a.co/d/7RT3PUt"},
@@ -134,6 +145,11 @@
         <a href="${b.e}" target="_blank" class="cta">Comprar</a>
       `;
       gal.append(card);
+    });
+
+    // Animaciones fade-in secuenciales
+    document.querySelectorAll('.fade-in').forEach((el,i)=>{
+      el.style.animationDelay = (i*0.2)+'s';
     });
   </script>
 </body>
