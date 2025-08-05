@@ -2,66 +2,51 @@
 <html lang="es" data-theme="light">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#232f3e">
   <title>📓 Libros de MoZ | Explorando Un Curso de Milagros</title>
   <meta name="description" content="Descubre los libros de MoZ: humor, profundidad y enseñanzas prácticas de Un Curso de Milagros. Compra en Amazon y despierta tu mente.">
-  <!-- Fonts & Preconnect -->
+  <!-- Fuentes y Preconnect -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icon Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-yH4CjPb+eYQ6IYXhFv6ABpTLzj4Wc0wLzIhI1ZcLlKlGOfzkvYbAacz3A6a4uvEMa5nZ8X4s1m9G7W8QZ8b7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    :root {
-      --bg: #fff;
-      --fg: #232f3e;
-      --accent: #ff9900;
-      --accent-hover: #ffb347;
-      --subtle: #f7f9fa;
-      --bg-secondary: #f1f3f5;
-      --bg-tertiary: #fff7e6;
-      --cta-text: #fff;
-      --font-sans: 'Poppins', sans-serif;
-      --font-serif: 'Playfair Display', serif;
-    }
-    [data-theme="dark"] {
-      --bg: #1a1a1a;
-      --fg: #e0e0e0;
-      --accent: #ff9900;
-      --subtle: #2a2a2a;
-      --bg-secondary: #2f2f2f;
-      --bg-tertiary: #3a2a1f;
-    }
-    * { box-sizing: border-box; margin:0; padding:0; }
-    body { font-family: var(--font-sans); background: var(--subtle); color: var(--fg); line-height:1.6; }
-    a { color: inherit; text-decoration:none; }
-    .skip-link { position:absolute; top:0; left:0; background:var(--accent); color:var(--cta-text); padding:0.5rem; transform:translateY(-100%); transition:transform .3s; }
-    .skip-link:focus { transform:translateY(0); }
-    header { background: linear-gradient(135deg, var(--accent), var(--fg)); padding:2rem 0; text-align:center; position: relative; }
-    header h1 { font-family: var(--font-serif); font-size:2.5rem; color:var(--bg); }
-    header p { margin-top:0.5rem; color: var(--bg-tertiary); font-size:1.1rem; }
-    .theme-toggle { position:absolute; top:1rem; right:1rem; background:var(--bg); border:none; padding:0.5rem; border-radius:50%; cursor:pointer; }
-    .section-divider { display:block; width:100%; height:100px; }
-    .container { max-width:1100px; margin:auto; padding:4rem 1rem; }
-    .bio, #gallery-section, .testimonials, .contact { background:var(--bg); border-radius:8px; margin-bottom:2rem; }
-    .bio { background:var(--bg-tertiary); text-align:center; padding:2rem; }
-    h2 { font-family: var(--font-serif); font-size:1.8rem; margin-bottom:1rem; text-align:center; background:var(--bg-secondary); padding:0.5rem 1rem; border-radius:4px; display:inline-block; }
-    .bio img { width:120px; height:120px; border-radius:50%; object-fit:cover; margin-bottom:1rem; }
-    .bio p { font-size:1rem; max-width:800px; margin:0 auto; }
-    .book-gallery { display:grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); gap:1.5rem; }
-    .book { padding:1rem; border:1px solid rgba(0,0,0,0.1); background:var(--bg); display:flex; flex-direction:column; transition:transform .3s, box-shadow .3s; }
-    .book:hover { transform:translateY(-5px); box-shadow:0 8px 16px rgba(0,0,0,0.1); }
-    .book img { width:100%; height:auto; object-fit:contain; margin-bottom:1rem; border-radius:4px; }
-    .book h3 { font-size:1rem; margin:0 0 0.5rem; color:#007185; font-family: var(--font-serif); }
-    .book p { font-size:0.85rem; flex-grow:1; margin-bottom:1rem; }
-    .cta { background: var(--accent); color: var(--cta-text); padding:0.75rem 1.5rem; border-radius:4px; display:inline-block; text-align:center; transition:background .3s, transform .1s; }
-    .cta:hover { background: var(--accent-hover); }
-    .cta:active { transform:scale(1.05); }
-    .testimonials { background:var(--bg-secondary); padding:2rem; }
-    .testimonial { font-style:italic; position:relative; padding:1rem; }
-    .testimonial::before { content:"\201C"; font-size:3rem; position:absolute; top:-10px; left:10px; color:var(--accent); }
-    .testimonial span { display:block; margin-top:1rem; font-style:normal; font-weight:600; text-align:right; }
-    .contact { text-align:center; padding:2rem; }
-    .fade-in { opacity:0; transform:translateY(20px); animation:fadeIn 0.8s forwards; }
-    @keyframes fadeIn { to { opacity:1; transform:translateY(0); } }
-    @media(max-width:600px){ header h1{font-size:2rem;} }
+    :root { font-size:16px; --bg:#fff; --fg:#232f3e; --accent:#ff9900; --accent-hover:#ffb347; --subtle:#f7f9fa; --bg-secondary:#f1f3f5; --bg-tertiary:#fff7e6; --cta-text:#fff; --font-sans:'Poppins',sans-serif; --font-serif:'Playfair Display',serif; --transition:0.3s; }
+    [data-theme="dark"] { --bg:#1a1a1a; --fg:#e0e0e0; --accent:#ff9900; --subtle:#2a2a2a; --bg-secondary:#2f2f2f; --bg-tertiary:#3a2a1f; }
+    *,*::before,*::after{box-sizing:border-box;}
+    html,body{margin:0;padding:0;font-family:var(--font-sans);background:var(--subtle);color:var(--fg);line-height:1.6;font-size:1rem;}
+    a{color:inherit;text-decoration:none;}
+    header{background:linear-gradient(135deg,var(--accent),var(--fg));padding:2rem 1rem;text-align:center;position:relative;}
+    header h1{font-family:var(--font-serif);font-size:2.5rem;color:var(--bg);margin:0;}
+    header p{margin-top:.5rem;color:var(--bg-tertiary);font-size:1.125rem;}
+    .theme-toggle{position:absolute;top:1rem;right:1rem;background:var(--bg);border:none;padding:.5rem;border-radius:50%;cursor:pointer;transition:background var(--transition);} .theme-toggle:hover{background:var(--bg-secondary);}
+    .skip-link{position:absolute;top:0;left:0;background:var(--accent);color:var(--cta-text);padding:.5rem;transform:translateY(-100%);transition:transform var(--transition);} .skip-link:focus{transform:translateY(0);}
+    .section-divider{display:block;width:100%;height:80px;}
+    .container{max-width:1100px;margin:auto;padding:3rem 1rem;}
+    h2{font-family:var(--font-serif);font-size:1.75rem;margin-bottom:1rem;text-align:center;background:var(--bg-secondary);display:inline-block;padding:.5rem 1rem;border-radius:4px;}
+    .bio{background:var(--bg-tertiary);text-align:center;padding:2rem;border-radius:8px;margin-bottom:2rem;}
+    .bio img{width:96px;height:96px;border-radius:50%;object-fit:cover;margin-bottom:1rem;}
+    .bio p{max-width:600px;margin:0 auto;font-size:1rem;}
+    .book-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1.25rem;margin:2rem 0;}
+    .book{background:var(--bg);border:1px solid rgba(0,0,0,0.1);border-radius:8px;display:flex;flex-direction:column;transition:transform var(--transition),box-shadow var(--transition);}
+    .book:hover{transform:translateY(-4px);box-shadow:0 6px 12px rgba(0,0,0,0.1);}
+    .book img{width:100%;height:auto;object-fit:contain;border-top-left-radius:8px;border-top-right-radius:8px;}
+    .book h3{font-family:var(--font-serif);font-size:1rem;margin:.75rem 0 .5rem;padding:0  .75rem;color:#007185;}
+    .book p{flex-grow:1;font-size:.875rem;padding:0 .75rem;}
+    .cta{background:var(--accent);color:var(--cta-text);padding:.75rem;text-align:center;margin:.75rem;border-radius:4px;transition:background var(--transition),transform var(--transition);font-size:.875rem;}
+    .cta:hover{background:var(--accent-hover);} .cta:active{transform:scale(1.05);}
+    /* Botones compartición */
+    .share{display:flex;justify-content:center;gap:.5rem;margin:0 .75rem 1rem;}
+    .share-btn{font-size:.75rem;color:var(--accent);transition:color var(--transition);} .share-btn:hover{color:var(--accent-hover);text-decoration:underline;}
+    .testimonials{background:var(--bg-secondary);border-radius:8px;padding:2rem;margin-bottom:2rem;}
+    .testimonial{font-style:italic;position:relative;padding:1rem;}
+    .testimonial::before{content:"\201C";font-size:3rem;position:absolute;top:-10px;left:10px;color:var(--accent);}
+    .testimonial span{display:block;margin-top:1rem;font-style:normal;font-weight:600;text-align:right;}
+    .contact{background:var(--bg);border-radius:8px;text-align:center;padding:2rem;margin-bottom:2rem;}
+    footer{text-align:center;padding:2rem 1rem;font-size:.875rem;color:#777;}
+    @media(max-width:768px){.book-gallery{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));}header h1{font-size:2rem;}h2{font-size:1.5rem;}}
+    @media(max-width:480px){.book-gallery{grid-template-columns:1fr;} .container{padding:2rem .75rem;}header p{font-size:1rem;}}
   </style>
 </head>
 <body>
@@ -72,85 +57,67 @@
     <p id="random-phrase">Despierta tu mente, transforma tu vida. 🧠✨</p>
   </header>
   <svg class="section-divider" viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="var(--bg-secondary)" d="M0,0 C600,100 900,0 1440,100 L1440,00 L0,0 Z"></path></svg>
-
   <main id="main">
     <section class="container bio fade-in">
       <img src="https://m.media-amazon.com/images/S/amzn-author-media-prod/tjk4kbdc83sckchj45rje95j1v._SY450_CR0%2C0%2C450%2C450_.jpg" alt="Foto de MoZ">
       <h2>Sobre MoZ</h2>
-      <p>Soy MoZ, escritor y conferencista con más de 15 años compartiendo las enseñanzas de <em>Un Curso de Milagros</em>. Esta página está administrada por Lupita, mi asistente virtual, para que tengas la mejor experiencia explorando mis libros. 🌟</p>
+      <p>Soy MoZ, escritor y conferencista con más de 15 años compartiendo las enseñanzas de <em>Un Curso de Milagros</em>. Explora mis libros con humor, claridad y profundidad. 🌟</p>
     </section>
-
     <section class="container fade-in" id="gallery-section">
-      <h2>Nuestros Libros</h2>
+      <h2>Mis Libros</h2>
       <div class="book-gallery" id="book-gallery"></div>
     </section>
-
     <section class="container testimonials fade-in">
       <h2>Testimonios</h2>
       <div class="testimonial" id="testimonial"></div>
     </section>
-
     <section class="container contact fade-in">
       <h2>Contacto</h2>
       <p>✉️ <a href="mailto:moz@primerotupaz.com">moz@primerotupaz.com</a> | 📸 <a href="https://www.instagram.com/primeratencion" target="_blank">Instagram</a> | ▶️ <a href="https://www.youtube.com/channel/UCWMdQmpS04i2j0ehwMmuMEw" target="_blank">YouTube</a></p>
     </section>
   </main>
-
   <footer class="fade-in">© 2025 MoZ. Todos los derechos reservados.</footer>
-
   <script>
-    // Dark/Light mode toggle
-    const themeBtn = document.querySelector('.theme-toggle');
-    themeBtn.addEventListener('click', ()=>{
-      const html = document.documentElement;
-      html.dataset.theme = html.dataset.theme === 'dark' ? 'light' : 'dark';
-    });
-
-    // Random phrase
-    const frases = [
-      "Despierta tu mente, transforma tu vida. 🧠✨",
-      "Un milagro a la vez, sin prisa pero con paz. 🌈",
-      "Explorar el Curso puede ser divertido. 😄",
-      "No busques la luz afuera, ya brillas dentro. 💡"
-    ];
-    document.getElementById('random-phrase').textContent = frases[Math.floor(Math.random()*frases.length)];
-
+    // Dark/Light mode
+    document.querySelector('.theme-toggle').addEventListener('click',()=>{document.documentElement.dataset.theme=document.documentElement.dataset.theme==='dark'?'light':'dark';});
+    // Frase aleatoria
+    const frases=["Despierta tu mente, transforma tu vida. 🧠✨","Un milagro a la vez, sin prisa pero con paz. 🌈","Explorar el Curso puede ser divertido. 😄","No busques la luz afuera, ya brillas dentro. 💡"];
+    document.getElementById('random-phrase').textContent=frases[Math.floor(Math.random()*frases.length)];
     // Testimonios
-    const testimonios = [
-      {t:"Estos libros me cambiaron la vida. Gracias MoZ por tu claridad.", n:"Carla Gómez – CDMX"},
-      {t:"Nunca pensé que Un Curso de Milagros pudiera ser tan divertido.", n:"Luis Mendoza – Bogotá"},
-      {t:"Leer a MoZ es como hablar con un amigo sabio y buena onda.", n:"Andrea Silva – Lima"},
-      {t:"La forma en que explica es única. ¡Recomendadísimo!", n:"José Pérez – Monterrey"},
-      {t:"Pensé que sería denso... pero terminé riéndome y aprendiendo mucho.", n:"Mariela Torres – Buenos Aires"}
-    ];
-    const t = testimonios[Math.floor(Math.random()*testimonios.length)];
-    document.getElementById('testimonial').innerHTML = `${t.t}<span>– ${t.n}</span>`;
-
+    const testimonios=[{t:"Estos libros me cambiaron la vida. Gracias MoZ por tu claridad.",n:"Carla Gómez – CDMX"},{t:"Nunca pensé que Un Curso de Milagros pudiera ser tan divertido.",n:"Luis Mendoza – Bogotá"},{t:"Leer a MoZ es como hablar con un amigo sabio y buena onda.",n:"Andrea Silva – Lima"},{t:"La forma en que explica es única. ¡Recomendadísimo!",n:"José Pérez – Monterrey"},{t:"Pensé que sería denso... pero terminé riéndome y aprendiendo mucho.",n:"Mariela Torres – Buenos Aires"}];
+    const t=testimonios[Math.floor(Math.random()*testimonios.length)];document.getElementById('testimonial').innerHTML=`${t.t}<span>– ${t.n}</span>`;
     // Galería libros
-    const libros = [
-      {t:"Explorando Un Curso de Milagros", i:"https://m.media-amazon.com/images/I/81jSGdbQRPL._SL1500_.jpg", d:"Una guía clara, cercana y llena de humor para estudiantes del Curso.", e:"https://a.co/d/jcTICwa"},
-      {t:"No soy especial", i:"https://m.media-amazon.com/images/I/818v1ZZXBYL._SL1500_.jpg", d:"Reflexiones directas para desinflar el ego con amor y firmeza.", e:"https://a.co/d/7RT3PUt"},
-      {t:"Conversaciones con MoZ", i:"https://m.media-amazon.com/images/I/816BucajEkL._SL1500_.jpg", d:"90 preguntas reales sobre el Curso, respondidas con profundidad y calidez.", e:"https://a.co/d/i7JFLJr"},
-      {t:"Finanzas en Paz", i:"https://m.media-amazon.com/images/I/71St4zevGZL._SL1500_.jpg", d:"Una nueva forma de ver el dinero con conciencia, abundancia y paz.", e:"https://a.co/d/bL7TeUB"},
-      {t:"Las Parábolas de Jesús", i:"https://m.media-amazon.com/images/I/71efrxZuoTL._SL1500_.jpg", d:"Una mirada luminosa y moderna a las parábolas desde el Curso.", e:"https://a.co/d/b5WxK1f"},
-      {t:"Devocionario de Un Curso de Milagros", i:"https://m.media-amazon.com/images/I/81DOcJp16gL._SL1500_.jpg", d:"Oraciones, afirmaciones y reflexiones para acompañar tu práctica diaria.", e:"https://a.co/d/46fFmYT"}
+    const libros=[
+      {t:"Explorando Un Curso de Milagros",i:"https://m.media-amazon.com/images/I/81jSGdbQRPL._SL1500_.jpg",d:"Una guía clara, cercana y llena de humor para estudiantes del Curso.",e:"https://a.co/d/jcTICwa"},
+      {t:"No soy especial",i:"https://m.media-amazon.com/images/I/818v1ZZXBYL._SL1500_.jpg",d:"Reflexiones directas para desinflar el ego con amor y firmeza.",e:"https://a.co/d/7RT3PUt"},
+      {t:"Conversaciones con MoZ",i:"https://m.media-amazon.com/images/I/816BucajEkL._SL1500_.jpg",d:"90 preguntas reales sobre el Curso, respondidas con profundidad y calidez.",e:"https://a.co/d/i7JFLJr"},
+      {t:"Finanzas en Paz",i:"https://m.media-amazon.com/images/I/71St4zevGZL._SL1500_.jpg",d:"Una nueva forma de ver el dinero con conciencia, abundancia y paz.",e:"https://a.co/d/bL7TeUB"},
+      {t:"Las Parábolas de Jesús",i:"https://m.media-amazon.com/images/I/71efrxZuoTL._SL1500_.jpg",d:"Una mirada luminosa y moderna a las parábolas desde el Curso.",e:"https://a.co/d/b5WxK1f"},
+      {t:"Devocionario de Un Curso de Milagros",i:"https://m.media-amazon.com/images/I/81DOcJp16gL._SL1500_.jpg",d:"Oraciones, afirmaciones y reflexiones para acompañar tu práctica diaria.",e:"https://a.co/d/46fFmYT"},
+      {t:"Cartas de Jesús a Platón: Diálogos sobre el alma, la verdad y el amor eterno",i:"https://m.media-amazon.com/images/I/71MIZKzV1LL._SL1500_.jpg",d:"Un diálogo ficticio entre Jesús y Platón que explora el perdón, la verdad eterna y el amor desde perspectivas mística y filosófica.",e:"https://a.co/d/fksOJbU"},
+      {t:"Oratoria para espirituales: Técnicas, humor y alma para comunicar desde lo profundo",i:"https://m.media-amazon.com/images/I/61IOamwMlRL._SL1500_.jpg",d:"Consejos prácticos y divertidos para hablar con autenticidad y profundidad en cualquier escenario.",e:"https://a.co/d/e3WZp7D"},
+      {t:"Primero Tu Paz: Dictados para la paz interior",i:"https://m.media-amazon.com/images/I/51LzJkhnEhL._SL1500_.jpg",d:"Dictados breves para cultivar tu paz interior en el día a día.",e:"https://a.co/d/hVLkdM3"}
     ];
-    const gal = document.getElementById('book-gallery');
+    const gal=document.getElementById('book-gallery');gal.innerHTML='';
     libros.forEach(b=>{
-      const card = document.createElement('div'); card.className='book';
-      card.innerHTML = `
+      const card=document.createElement('div');card.className='book';
+      card.innerHTML=`
         <img src="${b.i}" alt="${b.t}" loading="lazy">
         <h3>${b.t}</h3>
         <p>${b.d}</p>
         <a href="${b.e}" target="_blank" class="cta">Comprar</a>
+        <div class="share">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(b.e)}" target="_blank" class="share-btn">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(b.t + ' ' + b.e)}" target="_blank" class="share-btn">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
       `;
       gal.append(card);
     });
-
-    // Animaciones fade-in secuenciales
-    document.querySelectorAll('.fade-in').forEach((el,i)=>{
-      el.style.animationDelay = (i*0.2)+'s';
-    });
+    document.querySelectorAll('.fade-in').forEach((el,i)=>{el.style.animationDelay=(i*0.2)+'s';});
   </script>
 </body>
 </html>
