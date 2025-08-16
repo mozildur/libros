@@ -40,6 +40,8 @@
     .book p { flex-grow: 1; font-size: 0.875rem; padding: 0 0.75rem; }
     .cta { background: var(--accent); color: var(--cta-text); padding: 0.75rem; text-align: center; margin: 0.75rem; border-radius: 4px; transition: background var(--transition), transform var(--transition); font-size: 0.875rem; }
     .cta:hover { background: var(--accent-hover); } .cta:active { transform: scale(1.05); }
+    .amazon-btn { display: inline-block; background: var(--accent); color: var(--cta-text); padding: 0.75rem 1rem; margin-top: 1rem; border-radius: 4px; transition: background var(--transition), transform var(--transition); }
+    .amazon-btn:hover { background: var(--accent-hover); } .amazon-btn:active { transform: scale(1.05); }
     .share { display: flex; justify-content: center; gap: 1rem; margin: 0 0.75rem 1rem; }
     .share a { font-size: 0.875rem; color: var(--accent); transition: color var(--transition); }
     .share a:hover { color: var(--accent-hover); }
@@ -55,6 +57,7 @@
     <button class="theme-toggle" aria-label="Cambiar tema">🌓</button>
     <h1>📓 Libros de MoZ</h1>
     <p id="random-phrase">Despierta tu mente, transforma tu vida. 🧠✨</p>
+    <a href="https://www.amazon.com.mx/stores/author/B0F5BQ4CV8/allbooks?ingress=0&amp;visitId=a0876018-c3b8-4294-8537-c5f89c9cd0f4&amp;ref_=ap_rdr" target="_blank" class="amazon-btn">Mis libros en Amazon</a>
   </header>
   <svg class="section-divider" viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="var(--bg-secondary)" d="M0,0 C600,100 900,0 1440,100 L1440,00 L0,0 Z"></path></svg>
   <main id="main">
