@@ -48,10 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
         <h3>${b.t}</h3>
         <p>${b.d}</p>
         <a href="${b.e}" target="_blank" class="cta">Comprar</a>
-        <div class="share">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(b.e)}" target="_blank">Facebook</a>
-          <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(b.t + ' ' + b.e)}" target="_blank">Whatsapp</a>
-        </div>
       </figcaption>
     `;
     galEl.appendChild(card);

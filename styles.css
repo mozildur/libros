@@ -20,7 +20,7 @@ h2 { font-family: var(--font-serif); font-size: 1.75rem; margin-bottom: 1rem; te
 .testimonial { font-style: italic; position: relative; padding: 1rem; }
 .testimonial::before { content: "\201C"; font-size: 3rem; position: absolute; top: -10px; left: 10px; color: var(--accent);}
 .testimonial span { display: block; margin-top: 1rem; font-style: normal; font-weight: 600; text-align: right; }
-.book-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+.book-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
 .book { background: var(--bg); border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; display: flex; flex-direction: column; transition: transform var(--transition), box-shadow var(--transition); }
 .book:hover { transform: translateY(-4px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
 .book img { width: 100%; height: auto; object-fit: contain; border-top-left-radius: 8px; border-top-right-radius: 8px; }
@@ -31,10 +31,19 @@ h2 { font-family: var(--font-serif); font-size: 1.75rem; margin-bottom: 1rem; te
 .cta:hover { background: var(--accent-hover); } .cta:active { transform: scale(1.05); }
 .amazon-btn { display: inline-block; background: var(--accent); color: var(--cta-text); padding: 0.75rem 1rem; margin-top: 1rem; border-radius: 4px; transition: background var(--transition), transform var(--transition); }
 .amazon-btn:hover { background: var(--accent-hover); } .amazon-btn:active { transform: scale(1.05); }
-.share { display: flex; justify-content: center; gap: 1rem; margin: 0 0.75rem 1rem; }
-.share a { font-size: 0.875rem; color: var(--accent); transition: color var(--transition); }
-.share a:hover { color: var(--accent-hover); }
 .contact { background: var(--bg); border-radius: 8px; text-align: center; padding: 2rem; margin-bottom: 2rem; }
 footer { text-align: center; padding: 2rem 1rem; font-size: 0.875rem; color: #777; }
-@media (max-width: 768px) { .book-gallery { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); } header h1 { font-size: 2rem; } h2 { font-size: 1.5rem; } }
-@media (max-width: 480px) { .book-gallery { grid-template-columns: 1fr; } .container { padding: 2rem 0.75rem; } header p { font-size: 1rem; } }
+@media (max-width: 768px) {
+  .book-gallery { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+  header h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+}
+@media (max-width: 480px) {
+  .book-gallery { grid-template-columns: 1fr; }
+  .container { padding: 1.5rem 0.75rem; }
+  header p { font-size: 1rem; }
+}
+@media (min-width: 1200px) {
+  .container { max-width: 1200px; }
+  header h1 { font-size: 3rem; }
+}
