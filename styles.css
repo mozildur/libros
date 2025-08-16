@@ -1,0 +1,40 @@
+:root { font-size:16px; --bg:#fff; --fg:#232f3e; --accent:#ff9900; --accent-hover:#ffb347; --subtle:#f7f9fa; --bg-secondary:#f1f3f5; --bg-tertiary:#fff7e6; --cta-text:#fff; --font-sans:'Poppins',sans-serif; --font-serif:'Playfair Display',serif; --transition:0.3s; }
+[data-theme="dark"] { --bg:#1a1a1a; --fg:#e0e0e0; --accent:#ff9900; --subtle:#2a2a2a; --bg-secondary:#2f2f2f; --bg-tertiary:#3a2a1f; }
+*,*::before,*::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: var(--font-sans); background: var(--subtle); color: var(--fg); line-height: 1.6; font-size: 1rem; }
+a { color: inherit; text-decoration: none; }
+header { background: linear-gradient(135deg, var(--accent), var(--fg)); padding: 2rem 1rem; text-align: center; position: relative; }
+header h1 { font-family: var(--font-serif); font-size: 2.5rem; color: var(--bg); margin: 0; }
+header p { margin-top: 0.5rem; color: var(--bg-tertiary); font-size: 1.125rem; }
+.theme-toggle { position: absolute; top: 1rem; right: 1rem; background: var(--bg); border: none; padding: 0.5rem; border-radius: 50%; cursor: pointer; transition: background var(--transition); }
+.theme-toggle:hover { background: var(--bg-secondary); }
+.skip-link { position: absolute; top: 0; left: 0; background: var(--accent); color: var(--cta-text); padding: 0.5rem; transform: translateY(-100%); transition: transform var(--transition); }
+.skip-link:focus { transform: translateY(0); }
+.section-divider { display: block; width: 100%; height: 80px; }
+.container { max-width: 1100px; margin: auto; padding: 3rem 1rem; }
+h2 { font-family: var(--font-serif); font-size: 1.75rem; margin-bottom: 1rem; text-align: center; background: var(--bg-secondary); display: inline-block; padding: 0.5rem 1rem; border-radius: 4px; }
+.bio { background: var(--bg-tertiary); text-align: center; padding: 2rem; border-radius: 8px; margin-bottom: 2rem; }
+.bio img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; }
+.bio p { max-width: 600px; margin: 0 auto; font-size: 1rem; }
+.testimonials { background: var(--bg-secondary); border-radius: 8px; padding: 2rem; margin-bottom: 2rem; }
+.testimonial { font-style: italic; position: relative; padding: 1rem; }
+.testimonial::before { content: "\201C"; font-size: 3rem; position: absolute; top: -10px; left: 10px; color: var(--accent);}
+.testimonial span { display: block; margin-top: 1rem; font-style: normal; font-weight: 600; text-align: right; }
+.book-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+.book { background: var(--bg); border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; display: flex; flex-direction: column; transition: transform var(--transition), box-shadow var(--transition); }
+.book:hover { transform: translateY(-4px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
+.book img { width: 100%; height: auto; object-fit: contain; border-top-left-radius: 8px; border-top-right-radius: 8px; }
+.book figcaption { display: flex; flex-direction: column; flex-grow: 1; }
+.book h3 { font-family: var(--font-serif); font-size: 1rem; margin: 0.75rem 0 0.5rem; padding: 0 0.75rem; color: #007185; }
+.book p { flex-grow: 1; font-size: 0.875rem; padding: 0 0.75rem; }
+.cta { background: var(--accent); color: var(--cta-text); padding: 0.75rem; text-align: center; margin: 0.75rem; border-radius: 4px; transition: background var(--transition), transform var(--transition); font-size: 0.875rem; }
+.cta:hover { background: var(--accent-hover); } .cta:active { transform: scale(1.05); }
+.amazon-btn { display: inline-block; background: var(--accent); color: var(--cta-text); padding: 0.75rem 1rem; margin-top: 1rem; border-radius: 4px; transition: background var(--transition), transform var(--transition); }
+.amazon-btn:hover { background: var(--accent-hover); } .amazon-btn:active { transform: scale(1.05); }
+.share { display: flex; justify-content: center; gap: 1rem; margin: 0 0.75rem 1rem; }
+.share a { font-size: 0.875rem; color: var(--accent); transition: color var(--transition); }
+.share a:hover { color: var(--accent-hover); }
+.contact { background: var(--bg); border-radius: 8px; text-align: center; padding: 2rem; margin-bottom: 2rem; }
+footer { text-align: center; padding: 2rem 1rem; font-size: 0.875rem; color: #777; }
+@media (max-width: 768px) { .book-gallery { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); } header h1 { font-size: 2rem; } h2 { font-size: 1.5rem; } }
+@media (max-width: 480px) { .book-gallery { grid-template-columns: 1fr; } .container { padding: 2rem 0.75rem; } header p { font-size: 1rem; } }
