@@ -17,9 +17,9 @@ h2 { font-family: var(--font-serif); font-size: 1.75rem; margin-bottom: 1rem; te
 .bio img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; }
 .bio p { max-width: 600px; margin: 0 auto; font-size: 1rem; }
 .testimonials { background: var(--bg-secondary); border-radius: 8px; padding: 2rem; margin-bottom: 2rem; }
-.testimonial { font-style: italic; position: relative; padding: 1rem; }
-.testimonial::before { content: "\201C"; font-size: 3rem; position: absolute; top: -10px; left: 10px; color: var(--accent);}
-.testimonial span { display: block; margin-top: 1rem; font-style: normal; font-weight: 600; text-align: right; }
+.testimonial { font-style: italic; position: relative; padding: 1rem; font-size: 0.875rem; }
+.testimonial::before { content: "\201C"; font-size: 2rem; position: absolute; top: -10px; left: 10px; color: var(--accent);}
+.testimonial span { display: block; margin-top: 1rem; font-style: normal; font-weight: 600; text-align: right; font-size: 0.875rem; }
 .book-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
 .book { background: var(--bg); border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; display: flex; flex-direction: column; transition: transform var(--transition), box-shadow var(--transition); }
 .book:hover { transform: translateY(-4px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
